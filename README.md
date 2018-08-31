@@ -1,34 +1,16 @@
 # About this Repo
 
-This is a project fork from [https://github.com/docker-library/ghost](https://github.com/docker-library/ghost)
+233233233
 
-It use the [qn-store](https://github.com/yxwzaxns/qn-store) to store the image
 
-# How To Use
-
-In your config.js file, you'll need to add a new storage block to whichever environment you want to change:
-```
-storage: {
-    active: 'qn-store',
-    'qn-store': {
-    accessKey: 'your AK',
-    secretKey: 'your SK',
-    bucket: 'your bucket name',
-    origin: 'your storage url'
-     }
-},
-
-```
 # Example
 
 This is a docker-compose.yml
 ```
 myblog:
-  image: daocloud.io/yxwzaxns/ghost:latest
+  image: daocloud.io/hanmiao/pxder:0.2
   ports:
-   - "2368"
-  envrionment:
-   - PROTO_TYPE=https
+   - "23685"
   volumes:
-    - "/root/docker:/var/lib/ghost"
+    - "/root/docker:/home/node/app"
 ```
