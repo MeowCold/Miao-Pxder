@@ -7,8 +7,8 @@
 
 This is a docker-compose.yml
 ```
-myblog:
-  image: daocloud.io/hanmiao/pxder:0.2
+pxder:
+  image: hanmiao/pxder:0.2
   ports:
    - "23685"
   volumes:
