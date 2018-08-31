@@ -1,0 +1,6 @@
+myblog:
+  image: daocloud.io/yxwzaxns/ghost:latest
+  ports:
+   - "2368"
+  volumes:
+    - "/root/docker:/var/lib/ghost"
