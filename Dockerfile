@@ -13,14 +13,13 @@ RUN buildDeps=' \
 		unzip \
 	' \
 	&& set -x \
-	&& apt-get update && apt-get install -y $buildDeps --no-install-recommends && rm -rf /var/lib/apt/lists/* \
+	&& apt-get update && apt-get install -y \
 	&& npm cache clean \
 	&& rm -rf /tmp/npm*
 
 VOLUME $GHOST_CONTENT
 
-RUN npm install -g pxder
-RUN npm install --production
+RUN npm i -g pxder
 
 COPY docker-entrypoint.sh /entrypoint.sh
 COPY hosts /hosts
